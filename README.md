@@ -27,7 +27,7 @@ The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has
 Due to the possibility of frequent IP changes of the Raspberry Pi server I have used [WiFiManager](https://github.com/tzapu/WiFiManager) as it allows the use of custom paramters. I did find that after an upload a manual reset was sometimes needed if trying to use the access point.
 After trying lots of different configurations for the server mp3 encoding(ffmpeg,darkice) and distribution(icecast2,shoutcast), I have settled on using [Icecast2](http://icecast.org/) and [DarkIce](http://www.darkice.org/) with the following [Darkice configuration](https://github.com/smurf0969/WiFi_Speaker_OLED/blob/master/docs/darkice.cfg).
 
-##Thanks
+## Thanks
 Many thanks to the authors and contibutors for the main libraries that made this project possible  
 * [ESP8266Audio]()
 * [WiFiManager]()
