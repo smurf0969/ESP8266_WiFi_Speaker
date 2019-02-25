@@ -24,6 +24,15 @@ The configuration I finnally manages to get to work was:
 The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has a potentiometer I needed to turn it fully down to be able to program or run the ESP when only connected by USB serial connection. Powering from a USB power adapter for normal use, I had no problems.
 
 ## Installation
+## IDE & Library Versions
+### Arduino IDE
+ - Arduino: 1.8.8
+
+### Libraries
+  - WiFiManager 0.14 [https://github.com/tzapu/WiFiManager.git](https://github.com/tzapu/WiFiManager.git)
+  - ArduinoJson 6.8.0-beta [https://github.com/bblanchon/ArduinoJson.git](https://github.com/bblanchon/ArduinoJson.git)
+
+### Uploading
 Before uploading the sketch in the IDE please select the following options on the ESP8266:
 ````
 Tools->lwIP Variant->V2 stable
