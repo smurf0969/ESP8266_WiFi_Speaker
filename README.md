@@ -23,6 +23,13 @@ The configuration I finnally manages to get to work was:
    
 The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has a potentiometer I needed to turn it fully down to be able to program or run the ESP when only connected by USB serial connection. Powering from a USB power adapter for normal use, I had no problems.
 
+## Installation
+Before uploading the sketch in the IDE please select the following options on the ESP8266:
+````
+Tools->lwIP Variant->V2 stable
+Tools->CPU Frequency->160MHz
+````
+
 ## Putting it all together
 Due to the possibility of frequent IP changes of the Raspberry Pi server I have used [WiFiManager](https://github.com/tzapu/WiFiManager) as it allows the use of custom paramters. I did find that after an upload a manual reset was sometimes needed if trying to use the access point.
 After trying lots of different configurations for the server mp3 encoding(ffmpeg,darkice) and distribution(icecast2,shoutcast), I have settled on using [Icecast2](http://icecast.org/) and [DarkIce](http://www.darkice.org/) with the following [Darkice configuration](./docs/darkice.cfg).
