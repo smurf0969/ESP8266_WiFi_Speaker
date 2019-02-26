@@ -41,7 +41,7 @@ The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has
 
 
 ### IDE Settings
-Before uploading the sketch in the IDE please select the following options on the ESP8266:
+Before uploading the sketch please select the following options on the IDE:
 ````
 Tools->lwIP Variant->V2 stable
 Tools->CPU Frequency->160MHz
