@@ -29,11 +29,11 @@ The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has
 
 ### Hardware Package Core Libraries
   - ESP8266 Core [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino)
-  - ESP8266WiFi 1.0
-  - ESP8266WebServer 1.0
-  - DNSServer 1.1.0
-  - SPI 1.0
-  - Wire 1.0
+    - ESP8266WiFi 1.0
+    - ESP8266WebServer 1.0
+    - DNSServer 1.1.0
+    - SPI 1.0
+    - Wire 1.0
 ### Libraries
   - WifiManager 0.14 [https://github.com/tzapu/WiFiManager.git](https://github.com/tzapu/WiFiManager.git)
   - ArduinoJson 6.8.0-beta [https://github.com/bblanchon/ArduinoJson.git](https://github.com/bblanchon/ArduinoJson.git) or [https://blog.benoitblanchon.fr](https://blog.benoitblanchon.fr)
