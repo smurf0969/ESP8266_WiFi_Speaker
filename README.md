@@ -26,6 +26,9 @@ The 5V Audio Amplifier PAM8043 needs a lot of juice and I found that as mine has
 ## IDE settings & Library Versions
 Please check/review instructions and screenshots in the [Wiki](https://github.com/smurf0969/ESP8266_WiFi_Speaker/wiki)
 
+### Known Issues
+Depending on the streaming service and the quality of the stream you are connecting to stability of the connection and the speed at which HttpClient gets the data can vary. [issue #2](https://github.com/smurf0969/ESP8266_WiFi_Speaker/issues/2)
+
 ## Putting it all together
 Due to the possibility of frequent IP changes of the Raspberry Pi server I have used [WiFiManager](https://github.com/tzapu/WiFiManager) as it allows the use of custom paramters. I did find that after an upload a manual reset was sometimes needed if trying to use the access point.
 After trying lots of different configurations for the server mp3 encoding(ffmpeg,darkice) and distribution(icecast2,shoutcast), I have settled on using [Icecast2](http://icecast.org/) and [DarkIce](http://www.darkice.org/) with the following [Darkice configuration](./docs/darkice.cfg).
