@@ -18,8 +18,8 @@ before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
 
 install:
-   - arduino --install-library "ESP8266Audio","WiFiManager","Adafruit SSD1306"."Adafruit GFX Library"
-
+   - arduino --install-library "WiFiManager","Adafruit SSD1306"."Adafruit GFX Library"
+   - git clone https://github.com/earlephilhower/ESP8266Audio /usr/local/share/arduino/libraries/ESP8266Audio
 script:
    - build_main_platforms
 
