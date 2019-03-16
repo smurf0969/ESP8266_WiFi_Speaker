@@ -1,34 +1,51 @@
-language: c
+branches:
+    only:
+      - master
+      - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+      
+os: linux
+dist: trusty
+language: bash
 sudo: false
 cache:
   directories:
     - ~/arduino_ide
-    - ~/.arduino15/packages/
+  #  - ~/.arduino15/packages/
+before_cache:
+    - rm -rf ~/arduino_ide/hardware/esp8266com
+    - rm -rf  ~/arduino_ide/hardware/espressif
 git:
   depth: false
   quiet: true
 env:
   global:
-     - ARDUINO_IDE_VERSION="1.8.7"
-     - PRETTYNAME="ESP8266 WiFi Speaker"
-# Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
-#    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
+     - PRETTYNAME="ESP8266 WiFi Speaker""
+
+matrix:
+
+  include:
+
+    - env:
+
+      - BUILD_TYPE=build_esp8266
+      - BUILDDOXYGEN=false
+
+
 
 before_install:
-   - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
+
 
 install:
-      - mkdir -p $HOME/Arduino/libraries
-      - git clone https://github.com/earlephilhower/ESP8266Audio $HOME/Arduino/libraries/ESP8266Audio
-      - git clone https://github.com/adafruit/Adafruit-GFX-Library $HOME/Arduino/libraries/Adafruit_GFX_Library
-      - git clone https://github.com/adafruit/Adafruit_SSD1306 $HOME/Arduino/libraries/Adafruit_SSD1306
-      - git clone https://github.com/bblanchon/ArduinoJson $HOME/Arduino/libraries/ArduinoJson
-      - git clone https://github.com/tzapu/WiFiManager $HOME/Arduino/libraries/WiFiManager
-     
+
+
 script:
-   - build_main_platforms
+   - $TRAVIS_BUILD_DIR/travis/common.sh
 
 # Generate and deploy documentation
 after_success:
-  - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/library_check.sh)
-#  - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/skip-doxygen-warnings/doxy_gen_and_deploy.sh)
+ 
+
+notifications:
+  email:
+    on_success: change # default: change
+    on_failure: always # default: always
