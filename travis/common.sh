@@ -82,7 +82,7 @@ function install_libraries()
     mkdir -p $HOME/Arduino/libraries
     #Copy to sketch or library folder
     cp -a $TRAVIS_BUILD_DIR $HOME/Arduino/
-    #git clone https://github.com/greiman/SdFat $HOME/Arduino/libraries/SdFat
+    git clone https://github.com/greiman/SdFat $HOME/Arduino/libraries/SdFat
     git clone https://github.com/earlephilhower/ESP8266Audio $HOME/Arduino/libraries/ESP8266Audio
     git clone https://github.com/Gianbacchio/ESP8266_Spiram $HOME/Arduino/libraries/ESP8266_Spiram
     git clone https://github.com/adafruit/Adafruit-GFX-Library $HOME/Arduino/libraries/Adafruit-GFX-Library
@@ -90,7 +90,7 @@ function install_libraries()
     git clone https://github.com/bblanchon/ArduinoJson $HOME/Arduino/libraries/ArduinoJson
     git clone https://github.com/tzapu/WiFiManager $HOME/Arduino/libraries/WiFiManager
      # Following libs are not to be tested, just used.
-    #rm -rf $HOME/Arduino/libraries/SdFat/examples
+    rm -rf $HOME/Arduino/libraries/SdFat/examples
     rm -rf $HOME/Arduino/libraries/ESP8266_Spiram/examples
     rm -rf $HOME/Arduino/libraries/ESP8266Audio/examples
     rm -rf $HOME/Arduino/libraries/Adafruit-GFX-Library/examples
