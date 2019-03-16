@@ -1,4 +1,4 @@
-# ESP8266_WiFi_Speaker
+# ESP8266_WiFi_Speaker [![Build Status](https://travis-ci.com/smurf0969/ESP8266_WiFi_Speaker.svg?branch=master)](https://travis-ci.com/smurf0969/ESP8266_WiFi_Speaker)
 ESP8266 ESP12E MP3 WiFi Speaker with OLED screen, DAC & AMP
 ## Overview
 During a recent pantomime production we were unable to get the internal building sound system working and had to come up with a cheap solution to pipe music into the dressing rooms.
