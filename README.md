@@ -1,5 +1,7 @@
 # ESP8266_WiFi_Speaker [![Build Status](https://travis-ci.com/smurf0969/ESP8266_WiFi_Speaker.svg?branch=master)](https://travis-ci.com/smurf0969/ESP8266_WiFi_Speaker)
-ESP8266 ESP12E MP3 WiFi Speaker with OLED screen, DAC & AMP
+ESP8266 ESP12E MP3 WiFi Speaker with OLED screen, DAC & AMP 
+
+_**This project has been replaced by [ESP32 ESP8266 WiFi Speaker OLED](https://github.com/smurf0969/ESP32_ESP8266_WiFi_Speaker_OLED)**_  
 ## Overview
 During a recent pantomime production we were unable to get the internal building sound system working and had to come up with a cheap solution to pipe music into the dressing rooms.
 Cobbling together a Raspberry Pi with sound card, ffmpeg and node rmtp server we were able to stream live AAC audio to a couple of mobiles running VLC Player. However due to the limitations of running live streaming on a PI, also on poor WiFi and the buffering lag of VLC we ended up with a live stream that could be upto 40 seconds behind depending on the numer of connections, which was difficult for the cast and callers.
